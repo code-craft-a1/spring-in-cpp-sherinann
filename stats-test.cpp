@@ -13,9 +13,9 @@ TEST(Statistics, ReportsAverageMinMax) {
 
 TEST(Statistics, AverageNaNForEmpty) {
     auto computedStats = Statistics::ComputeStatistics({});
-    //All fields of computedStats (average, max, min) must be
-    //NAN (not-a-number), as defined in math.h
+    // All fields of computedStats (average, max, min) must be
+    // NAN (not-a-number), as defined in math.h
     
-    //Design the EXPECT statement here.
-    //Use http://www.cplusplus.com/reference/cmath/isnan/
+    // Specify the EXPECT statement here.
+    // Use http://www.cplusplus.com/reference/cmath/isnan/
 }
