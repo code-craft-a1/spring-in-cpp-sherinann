@@ -1,7 +1,7 @@
-#include "stats.h"
-
-#include "gtest/gtest.h"
+#include <math.h>
 #include <cmath>
+#include "stats.h"
+#include "gtest/gtest.h"
 
 TEST(Statistics, ReportsAverageMinMax) {
     auto computedStats = Statistics::ComputeStatistics({1.5, 8.9, 3.2, 4.5});
@@ -13,6 +13,9 @@ TEST(Statistics, ReportsAverageMinMax) {
 
 TEST(Statistics, AverageNaNForEmpty) {
     auto computedStats = Statistics::ComputeStatistics({});
+    EXPECT_NE(NAN, computedStats.average);
+    EXPECT_NE(NAN, computedStats.min);
+    EXPECT_NE(NAN, computedStats.max);
     // All fields of computedStats (average, max, min) must be
     // NAN (not-a-number), as defined in math.h
     
