@@ -13,6 +13,9 @@ TEST(Statistics, ReportsAverageMinMax) {
 
 TEST(Statistics, AverageNaNForEmpty) {
     auto computedStats = Statistics::ComputeStatistics({});
+    EXPECT_NE(NAN, computedStats.average);
+    EXPECT_NE(NAN, computedStats.min);
+    EXPECT_NE(NAN, computedStats.max);
     // All fields of computedStats (average, max, min) must be
     // NAN (not-a-number), as defined in math.h
     
