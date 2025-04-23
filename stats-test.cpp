@@ -1,8 +1,7 @@
-#include "stats.h"
-
-#include "gtest/gtest.h"
-#include <cmath>
 #include <math.h>
+#include <cmath>
+#include "stats.h"
+#include "gtest/gtest.h"
 
 TEST(Statistics, ReportsAverageMinMax) {
     auto computedStats = Statistics::ComputeStatistics({1.5, 8.9, 3.2, 4.5});
